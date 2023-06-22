@@ -12,7 +12,7 @@ public class Main {
         System.out.println(ClassLayout.parseInstance(u1).instanceSize());
         System.out.println(ClassLayout.parseInstance(u2).instanceSize());
         System.out.println(ClassLayout.parseInstance(u2).toPrintable());
-        System.out.println("使用lucene的内存工具测出的u2 及子 对象(username)占用总内存字节数为："+RamUsageEstimator.sizeOf(u2));
+        System.out.println("使用lucene的内存工具测出的 u2 及子对象(username)占用总内存字节数为："+RamUsageEstimator.sizeOf(u2));
 
 
         String str1 = "abcde";
