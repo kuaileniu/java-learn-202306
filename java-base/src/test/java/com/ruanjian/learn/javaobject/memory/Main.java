@@ -9,14 +9,14 @@ public class Main {
         User u1 = new User();
         User u2 = new User();
         u2.setUsername("abcde");
-        System.out.println(ClassLayout.parseInstance(u1).instanceSize());
-        System.out.println(ClassLayout.parseInstance(u2).instanceSize());
-        System.out.println(ClassLayout.parseInstance(u2).toPrintable());
-        System.out.println("使用lucene的内存工具测出的 u2 及子对象(username)占用总内存字节数为："+RamUsageEstimator.sizeOf(u2));
+        System.out.println("user1的实列内存数据：" + ClassLayout.parseInstance(u1).instanceSize());
+        System.out.println("user2的实列内存数据：" + ClassLayout.parseInstance(u2).instanceSize());
+        System.out.println("user2的内存数据：" + ClassLayout.parseInstance(u2).toPrintable());
+        System.out.println("使用lucene的内存工具测出的 u2 及子对象(username)占用总内存字节数为：" + RamUsageEstimator.sizeOf(u2));
 
 
         String str1 = "abcde";
-        System.out.println(str1+"的size："+ClassLayout.parseInstance(str1).instanceSize());
-        System.out.println(str1+"的Printable："+ClassLayout.parseInstance(str1).toPrintable());
+        System.out.println(str1 + "的size：" + ClassLayout.parseInstance(str1).instanceSize());
+        System.out.println(str1 + "的Printable：" + ClassLayout.parseInstance(str1).toPrintable());
     }
 }
